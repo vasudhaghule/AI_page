@@ -1,10 +1,10 @@
 "use client";
+import { motion } from "framer-motion";
 import Image from "next/image";
-import avatar1 from "@/assets/avatar-1.png"; 
+import avatar1 from "@/assets/avatar-1.png";
 import avatar2 from "@/assets/avatar-2.png";
 import avatar3 from "@/assets/avatar-3.png";
 import avatar4 from "@/assets/avatar-4.png";
-
 
 const testimonials = [
   {
@@ -44,12 +44,12 @@ export const Testimonials = () => {
           Our revolutionary AI SEO tools have transformed our clients&apos; strategies.
         </p>
         <div className="overflow-hidden mt-10 [mask-image:linear-gradient(to_right,transparent,black_20%,black_80%,transparent)]">
-          <div 
+          <motion.div
             initial={{
-              translateX: '-50%'
+              translateX: "-50%",
             }}
             animate={{
-              translateX: "0",
+              translateX: "0%",
             }}
             transition={{
               repeat: Infinity,
@@ -81,7 +81,7 @@ export const Testimonials = () => {
                 </div>
               </div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
